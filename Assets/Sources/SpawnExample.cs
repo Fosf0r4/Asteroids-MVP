@@ -20,17 +20,23 @@ public class SpawnExample : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        _factory.CreateNlo(new Nlo(_init.Ship, GetRandomPositionOutsideScreen(), Config.NloSpeed));
+        _factory.CreateNlo2(new Nlo(_factory.Nllo, GetRandomPositionOutsideScreen(), Config.NloSpeed));
+    }
+
     private void OnTick()
     {
         float chance = Random.Range(0, 100);
 
         if (chance < 20)
         {
-            _factory.CreateNlo(new Nlo(_init.Ship, GetRandomPositionOutsideScreen(), Config.NloSpeed));
+            _factory.CreateNlo(new Nlo(_factory.Nllo2, GetRandomPositionOutsideScreen(), Config.NloSpeed));
         }
         else if (chance < 40)
         {
-            _factory.CreateNlo2(new Nlo(_init.Ship, GetRandomPositionOutsideScreen(), Config.NloSpeed));
+            _factory.CreateNlo2(new Nlo(_factory.Nllo, GetRandomPositionOutsideScreen(), Config.NloSpeed));
         }
         else
         {

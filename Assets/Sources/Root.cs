@@ -42,6 +42,7 @@ public class Root : MonoBehaviour
 
     private void Awake()    
     {
+
         _shipModel = new Ship(new Vector2(0.5f, 0.5f), 0);
 
         _baseGun = new DefaultGun(_shipModel);
@@ -57,6 +58,7 @@ public class Root : MonoBehaviour
         _shipPresenter.Init(this);
 
         _laserGunRollback = new LaserGunRollback(_laserGun, Config.LaserCooldown);
+
     }
 
     private void OnEnable()

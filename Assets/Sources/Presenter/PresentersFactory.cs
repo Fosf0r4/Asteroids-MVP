@@ -12,6 +12,9 @@ public class PresentersFactory : MonoBehaviour
     [SerializeField] private Presenter _nloTemplate;
     [SerializeField] private Presenter _nlo2Template;
 
+    public Nlo Nllo;
+    public Nlo Nllo2;
+
     public void CreateBullet(Bullet bullet)
     {
         if(bullet is LaserGunBullet)
@@ -28,11 +31,13 @@ public class PresentersFactory : MonoBehaviour
 
     public void CreateNlo(Nlo nlo)
     {
+        Nllo = nlo;
         CreatePresenter(_nloTemplate, nlo);
     }
 
     public void CreateNlo2(Nlo nlo)
     {
+        Nllo2 = nlo;
         CreatePresenter(_nlo2Template, nlo);
     }
 
