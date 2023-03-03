@@ -1,4 +1,7 @@
 using Asteroids.Model;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,8 +22,7 @@ public class Root : MonoBehaviour
     public Ship Ship => _shipModel;
     public LaserGun LaserGun => _laserGun;
     public LaserGunRollback LaserGunRollback => _laserGunRollback;
-    public ShipPresenter ShipPresenter => _shipPresenter;   
- 
+    public ShipPresenter ShipPresenter => _shipPresenter;
 
     public void GameOver()
     {
@@ -38,7 +40,7 @@ public class Root : MonoBehaviour
         _shipInputRouter.OnDisable();
     }
 
-    private void Awake()
+    private void Awake()    
     {
         _shipModel = new Ship(new Vector2(0.5f, 0.5f), 0);
 

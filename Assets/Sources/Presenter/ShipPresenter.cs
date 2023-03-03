@@ -16,12 +16,15 @@ public class ShipPresenter : Presenter
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            _init.OnHit(1);
-
-            if (ShipHealth == 0)
+            if (ShipHealth > 0)
             {
-                _init.GameOver();
-            }
+                _init.OnHit(1);
+
+                if (ShipHealth == 0)
+                {
+                    _init.GameOver();
+                }
+            } 
         }
     }
 }

@@ -114,7 +114,7 @@ namespace Asteroids.Input
                 {
                     ""name"": ""negative"",
                     ""id"": ""02f47a46-655b-45f2-9d92-f28adde1e988"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -125,7 +125,7 @@ namespace Asteroids.Input
                 {
                     ""name"": ""positive"",
                     ""id"": ""64ecaf39-7d68-4106-80b7-0df12a9cda4c"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

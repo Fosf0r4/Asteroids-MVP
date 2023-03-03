@@ -28,6 +28,10 @@ public class SpawnExample : MonoBehaviour
         {
             _factory.CreateNlo(new Nlo(_init.Ship, GetRandomPositionOutsideScreen(), Config.NloSpeed));
         }
+        else if (chance < 40)
+        {
+            _factory.CreateNlo2(new Nlo(_init.Ship, GetRandomPositionOutsideScreen(), Config.NloSpeed));
+        }
         else
         {
             Vector2 position = GetRandomPositionOutsideScreen();
